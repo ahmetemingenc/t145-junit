@@ -11,7 +11,7 @@ import utilities.TestBase_Each;
 public class C04_KeyboardActions extends TestBase_Each {
 
     @Test
-    public void test01(){
+    public void test01() {
 
         // 1- https://www.testotomasyonu.com sayfasina gidelim
         driver.get("https://www.testotomasyonu.com");
@@ -35,5 +35,5 @@ public class C04_KeyboardActions extends TestBase_Each {
         String actualName = productNameElement.getText();
 
         Assertions.assertTrue(actualName.contains(expectedNameContent));
-
+    }
 }
