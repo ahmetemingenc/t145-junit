@@ -1,5 +1,6 @@
 package utilities;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class ReusableMethods {
+public class ReusableMethods extends TestBase_Each{
 
     public static List<String> convertStringList(List<WebElement> elementList) {
 
@@ -54,5 +55,13 @@ public class ReusableMethods {
                 break;
             };
         }
+    }
+
+    public String getCellData(int lineNo, int rowNo){
+
+        String dynamicXpath = "//tbody/tr[" + lineNo + "]/td[" + rowNo + "]";
+        WebElement dynamicCellDataElement = driver.findElement(By.xpath(dynamicXpath));
+
+        return dynamicCellDataElement.getText();
     }
 }
