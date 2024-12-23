@@ -57,9 +57,9 @@ public class ReusableMethods extends TestBase_Each{
         }
     }
 
-    public String getCellData(int lineNo, int rowNo){
+    public String getCellData(int rowNo, int columnNo){
 
-        String dynamicXpath = "//tbody/tr[" + lineNo + "]/td[" + rowNo + "]";
+        String dynamicXpath = "//tbody/tr[" + rowNo + "]/td[" + columnNo + "]";
         WebElement dynamicCellDataElement = driver.findElement(By.xpath(dynamicXpath));
 
         return dynamicCellDataElement.getText();
