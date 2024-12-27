@@ -54,7 +54,7 @@ public class C02_Assertions {
     public void titleTest(){
         // titleTest => Sayfa başlığının “Rest” içermediğini(contains) test edin
 
-        String unExpectedTitle = "Rest";
+        String unExpectedTitle = "Best";
         String actualTitle = driver.getTitle();
 
         Assertions.assertFalse(actualTitle.contains(unExpectedTitle));
