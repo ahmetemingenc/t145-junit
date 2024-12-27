@@ -57,7 +57,7 @@ public class C02_Assertions {
         String unExpectedTitle = "Rest";
         String actualTitle = driver.getTitle();
 
-        Assertions.assertTrue(actualTitle.contains(unExpectedTitle));
+        Assertions.assertFalse(actualTitle.contains(unExpectedTitle));
     }
 
     @Test
