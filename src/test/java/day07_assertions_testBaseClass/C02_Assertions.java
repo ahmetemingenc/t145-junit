@@ -75,6 +75,6 @@ public class C02_Assertions {
 
         WebElement francaisLinkElement = driver.findElement(By.xpath("//*[text()='Français']"));
 
-        Assertions.assertTrue(francaisLinkElement.isDisplayed());
+        Assertions.assertFalse(francaisLinkElement.isDisplayed());
     }
 }
